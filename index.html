@@ -20,13 +20,7 @@
       <form action="submit.php" method="post" id="validate-form">
         <div class="form-field">
           <label for="name">Name</label>
-          <input
-            type="text"
-            required
-            name="name"
-            id="name"
-            placeholder="Your Name"
-          />
+          <input type="text" name="name" id="name" placeholder="Your Name" />
         </div>
         <div class="form-field">
           <label for="email">Email</label>
@@ -64,6 +58,22 @@
             placeholder="Your Expectation Salary"
           />
         </div>
+
+        <div class="form-field skill-fields">
+          <label for="skill">Your skills</label>
+          <div class="wrapper">
+            <input
+              type="text"
+              name="skill[]"
+              id="skill"
+              placeholder="Your skill"
+            />
+            <div class="icon add_button">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
         <div class="form-field">
           <label for="password">Password</label>
           <div class="wrapper">
@@ -80,20 +90,22 @@
           </div>
         </div>
 
-        <div class="form-field skill-fields">
-          <label for="skill">Your skills</label>
+        <div class="form-field">
+          <label for="conf_password">Confirm Password</label>
           <div class="wrapper">
             <input
-              type="text"
-              name="skill[]"
-              id="skill"
-              placeholder="Your skill"
+              type="password"
+              name="conf_password"
+              id="conf_password"
+              placeholder="Confirm Password"
             />
-            <div class="icon add_button">
-                <i class="fas fa-plus"></i>
+            <div class="icon conf-pass">
+              <i class="far fa-eye"></i>
+              <!-- <i class="far fa-eye-slash"></i> -->
             </div>
           </div>
         </div>
+
         <div class="form-field">
           <button type="submit">Submit</button>
         </div>
